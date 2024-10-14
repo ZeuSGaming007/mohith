@@ -1,0 +1,480 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+ background-image: url('images\IMG_8885.JPG"'); 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark text */
+}
+
+/* Main content styling */
+#main-content {
+    padding: 20px;
+}
+
+/* Welcome section styling */
+.welcome-page {
+    background: #e0e0e0; /* Light grey background */
+    color: #333; /* Dark text */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.welcome-page:hover {
+    transform: scale(1.02);
+}
+
+/* Navigation styling */
+nav {
+    background-color:  #b0b0b0; /* dark grey background for nav */
+    padding: 15px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space below nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items in a row */
+    justify-content: space-around; /* Distribute evenly */
+}
+
+nav ul li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+nav a {
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Padding for click area */
+    background-color: #e0e0e0; /* Grey background for individual link */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Search bar styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none;
+}
+
+/* Button styling */
+.service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-buttons button {
+    background-color: #e0e0e0; /* Grey */
+    color: #333; /* Dark text */
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 calc(30% - 10px); /* Responsive button width */
+}
+
+.service-buttons button:hover {
+    background-color: #b0b0b0; /* Darker on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Ensure all images are equal and have a size */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintains aspect ratio */
+}
+
+/* Contact us styles */
+h2, h3 {
+text-align: center;
+    color: #555; /* Dark grey for headings */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Spacing between fields */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: #e0e0e0; /* Grey button for all actions */
+    color: #333; /* Dark text */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+}
+
+/* Social links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff; /* Primary color */
+}
+
+/* Hide other services initially */
+#other-service-container {
+    display: none; /* Initially hidden */
+}
+
+/* Home button */
+.home-button {
+    background-color: #e0e0e0; /* Grey button for home */
+    color: #333; /* Dark text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-left: 1.5%;
+    
+}
+
+.home-button:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+}
+
+/* About Us Section */
+#about-us {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center the items */
+    padding: 40px; /* Increase padding for a more spacious feel */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.team-member {
+    flex: 1 1 250px; /* Flex properties to ensure responsiveness */
+    margin: 20px; /* Increased space between members */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.team-member img {
+    width: 350px; /* Set a fixed width */
+    height: 350px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 25%; /* Make images circular */
+    border: 3px solid grey; /* Add a blue border to images */
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+.team-member img:hover {
+    border-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for team member names and titles */
+.team-member h3 {
+    margin: 10px 0 5px; /* Margin for spacing */
+    font-size: 1.5em; /* Adjust font size */
+    color: #333; /* Darker color for names */
+    font-weight: bold; /* Bold font for names */
+}
+
+.team-member p {
+    margin: 0; /* Remove default margins */
+    color: #777; /* Gray color for titles */
+    font-style: italic; /* Italic style for titles */
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 600px) {
+    #about-us {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .team-member {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+/* Doorstep Services Section */
+/* Form Container Styling */
+.door-step-service {
+    background-color: #ffffff; /* White background for form */
+    padding: 30px; /* Padding for form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-top: 20px; /* Space above the form */
+}
+
+/* Form Heading */
+.door-step-service h2 {
+    color: #555; /* Dark grey for headings */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form Label */
+label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 8px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+    color: #333; /* Dark grey for labels */
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside fields */
+    margin-bottom: 15px; /* Space below fields */
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s; /* Transition for border color */
+    font-size: 16px; /* Font size */
+}
+
+/* Focus Effect for Input Fields */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Other Service Container */
+#other-service-container {
+    display: none; /* Hidden by default */
+}
+
+/* Button Styling for Forms */
+button[type="submit"] {
+    background-color: #e0e0e0; /* Grey button */
+    color: #333; /* Dark text */
+    padding: 12px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+    width: 100%; /* Full width for button */
+    font-size: 16px; /* Font size */
+}
+
+button[type="submit"]:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff4d4d; /* Red color for errors */
+    margin-top: -10px; /* Space above error */
+    margin-bottom: 10px; /* Space below error */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#welcome-page {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #555;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.home-button {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.home-button:hover {
+    background-color: #5a6268;
+}
+/* Global styles for <p> tags */
+p {
+    margin: 15px 0; /* Add margin for spacing */
+    font-size: 1em; /* Set base font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #444; /* Dark gray color for text */
+    font-family: 'Arial', sans-serif; /* Set a clean sans-serif font */
+    text-align: center /* Justify text for a neat appearance */
+}
+
+/* Optional: Add specific styles for different contexts */
+p.intro {
+    font-weight: bold; /* Bold for introductory paragraphs */
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #007bff; /* Primary color for emphasis */
+}
+
+p.note {
+    font-style: italic; /* Italicize notes or side information */
+    color: #555; /* Lighter gray color */
+    background-color: #f0f8ff; /* Light background for notes */
+    padding: 10px; /* Padding for note paragraphs */
+    border-left: 3px solid #007bff; /* Left border for emphasis */
+    margin: 20px 0; /* Extra margin for spacing */
+}
+/* Background image for the index page only */
+#index-page {
+    background-image: url('images/IMG_8885.JPG'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #fff; /* Change text color to white for better contrast */
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    position: relative; /* For positioning the overlay */
+}
+
+/* Add an overlay for better text readability */
+.index-overlay {
+    position: absolute; /* Positioning to cover the entire area */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure it sits above the background image */
+}
+
+/* Adjust content styles */
+.content {
+    position: relative; /* Position relative for z-index context */
+    z-index: 2; /* Content sits above the overlay */
+    padding: 20px; /* Add some padding for content */
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm(event) {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            // Name validation: only letters and spaces, with at most one space between words
+            const nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)?$/;
+            if (!nameRegex.test(name)) {
+                alert('Name must contain only letters and at most one space between them.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Phone validation: exactly 10 digits
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Phone number must be exactly 10 digits.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+
+<body> 
+    <!-- Main Website Content -->
+    <div id="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-page">
+            <div class="welcome-content">
+                <h2>Welcome to Digital Services</h2>
+                <h3>Your one-stop solution for Government and Real Estate Services</h3>
+                <a href="index.html"> <!-- Replace with your homepage URL -->
+                    <i class="fas fa-home" style="font-size: 30px; vertical-align: middle;"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <button onclick="window.location.href='index.html'" class="home-button">Go to Home</button>
+
+    <!-- Main Contact Us Section -->
+    <div class="contact-us">
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="return validateForm(event);">
+                <input type="hidden" name="access_key" value="6cf7a959-e311-4a7c-beec-15c24879039b"> <!-- Replace with your actual Web3Forms access key -->
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <div class="social-links">
+            <h3>Follow Us on Social Media</h3>
+            <a href="[Facebook Link]" target="_blank">Facebook</a>
+            <a href="[Twitter Link]" target="_blank">Twitter</a>
+            <a href="[Instagram Link]" target="_blank">Instagram</a>
+            <a href="[LinkedIn Link]" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>

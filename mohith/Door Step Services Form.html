@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Slot - Door Step Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkOtherService() {
+            const serviceDropdown = document.getElementById('service');
+            const otherServiceContainer = document.getElementById('other-service-container');
+            
+            if (serviceDropdown.value === 'other') {
+                otherServiceContainer.style.display = 'block';
+            } else {
+                otherServiceContainer.style.display = 'none';
+            }
+        }
+
+        function validateForm(event) {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            // Name validation: only letters and spaces, with at most one space between words
+            const nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)?$/;
+            if (!nameRegex.test(name)) {
+                alert('Name must contain only letters and at most one space between them.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Phone validation: exactly 10 digits
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Phone number must be exactly 10 digits.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <!-- Main Website Content -->
+    <div id="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-page">
+            <div class="welcome-content">
+                <h2>Welcome to Digital Services</h2>
+                <h3>Your one-stop solution for Government and Real Estate Services</h3>
+            </div>
+        </section>
+        
+        <button onclick="window.location.href='index.html'" class="home-button">Go to Home</button>
+        
+        <h3>Book Door Step Service</h3>
+        <form action="https://api.web3forms.com/submit" method="POST" class="door-step-service-form" onsubmit="return validateForm(event);">
+            <input type="hidden" name="access_key" value="6cf7a959-e311-4a7c-beec-15c24879039b"> <!-- Replace with your actual Web3Forms access key -->
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+    <label for="service">Select Service</label>
+    <select id="service" name="service" onchange="checkOtherService()" required>
+        <option value="">Select a service</option>
+        <option value="Aadhaar Services">Aadhaar Services</option>
+        <option value="All Type Pensions">All Type Pensions</option>
+        <option value="Banking Services">Banking Services</option>
+        <option value="Birth and Death Certificate">Birth and Death Certificate</option>
+        <option value="Fruit ID and Payment">Fruit ID and Payment</option>
+        <option value="E Stamp">E Stamp</option>
+        <option value="Eshram Card">Eshram Card</option>
+        <option value="Flight Tickets">Flight Tickets</option>
+        <option value="Health Card / ABHA Card">Health Card / ABHA Card</option>
+        <option value="Health Insurance">Health Insurance</option>
+        <option value="Income and Cast">Income and Cast</option>
+        <option value="Jeevan Praman Life Certificate">Jeevan Praman Life Certificate</option>
+        <option value="Labour Card">Labour Card</option>
+        <option value="MSME Udhyam Certificate">MSME Udhyam Certificate</option>
+        <option value="NPS">National Pension Scheme</option>
+        <option value="Pan Card">Pan Card</option>
+        <option value="PF Services">PF Services</option>
+        <option value="Police Department Services">Police Department Services and Job Verification Application</option>
+        <option value="Property Tax">Property Tax</option>
+        <option value="Ration Card">Ration Card</option>
+        <option value="RTO Service">RTO Service</option>
+        <option value="Revenue Department Services">Revenue Department Services</option>
+        <option value="RTC / MR">RTC / MR</option>
+        <option value="Senior Citizen Card">Senior Citizen Card</option>
+        <option value="Voter ID">Voter ID</option>
+        <option value="Vehicle Insurance">Vehicle Insurance</option>
+        <option value="Water Bill / Electricity Bill">Water Bill / Electricity Bill</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+
+            <!-- This section is hidden until 'Other' is selected -->
+            <div id="other-service-container" class="form-group" style="display: none;">
+                <label for="other-service">Please specify the service:</label>
+                <input type="text" id="other-service" name="otherService">
+            </div>
+
+            <button type="submit" class="submit-button">Book Slot</button>
+        </form>
+    </div>
+</body>
+</html>

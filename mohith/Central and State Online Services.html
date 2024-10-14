@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Central and State Online Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+ <!-- Main Website Content -->
+    <div id="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-page">
+            <div class="welcome-content">
+                <h2>Welcome to Digital Services</h2>
+                <h3>Your one-stop solution for Government and Real Estate Services</h3>
+                <a href="index.html"> <!-- Replace with your homepage URL -->
+                    <i class="fas fa-home" style="font-size: 30px; vertical-align: middle;"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+<button onclick="window.location.href='index.html'" class="home-button">Go to Home</button>
+    <!-- Central and State Online Services Section -->
+    <section id="central-state" class="services">
+        <div class="container">
+            <h2>Central and State Online Services</h2>
+            <input type="text" id="search-bar" onkeyup="filterServices()" placeholder="Search for services...">
+            <div class="service-buttons">
+                <button>Aadhaar Services</button>
+                <button>Pan Card</button>
+                <button>Passport</button>
+                <button>Voter ID</button>
+                <button>Ration Card</button>
+                <button>Banking Services</button>
+                <button>MSME Udhyam Certificate</button>
+                <button>NPS (National Pension Scheme)</button>
+                <button>All Type Pensions</button>
+                <button>Jeevan Praman Life Certificate</button>
+                <button>RTO Services</button>
+                <button>Police Department Services and Job Verification Applications</button>
+                <button>Health Card / ABHA Card</button>
+                <button>Revenue Department Services</button>
+                <button>Gruha Lakshmi / KYC</button>
+                <button>Eshram Card</button>
+                <button>RTC / MR</button>
+                <button>Income and Caste Certificate</button>
+                <button>PM Kissan</button>
+                <button>Flight Tickets</button>
+                <button>E-Stamp</button>
+                <button>Labour Card</button>
+                <button>PF Services</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        // JavaScript function to filter services
+        function filterServices() {
+            const input = document.getElementById('search-bar');
+            const filter = input.value.toLowerCase();
+            const serviceButtons = document.querySelectorAll('#central-state .service-buttons button');
+
+            serviceButtons.forEach(button => {
+                const buttonText = button.innerText.toLowerCase();
+                button.style.display = buttonText.includes(filter) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
